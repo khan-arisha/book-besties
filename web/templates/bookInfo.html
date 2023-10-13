@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bombastic Book Besties</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='datastyle.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bookInfoStyle.css') }}">
+</head>
+
+<body>
+    <div id="page-container">  
+    <nav>
+        <ul id="headerTitle">
+            <li><a href="/"> Bombastic Book Besties</li>
+        </ul>
+        
+        <ul id="navButtons">
+            <li><a href="/">Home</a></li>
+            <li><a class="current" href="/search">Search the Data</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    
+    <div id="content-containter">
+    <h1> Results </h1>
+
+    <div class="book-cover">
+        <p id="book-title"> {{ results[0]}}</p>
+            <p>by</p>
+            <p id="author"> {{ results[1].title()}} </p>
+            <p id="year"> {{ results[4].year }} </p>
+    </div>
+
+    <div class="book-facts">
+        <ul id="best-rank">
+            <li id="number">{{ results[2] }}</li>
+            <li id="descriptor">Best Rank Reached</li>
+        </ul>
+        <ul id="debut-rank">
+            <li id="number">{{ results[4] }}</li>
+            <li id="descriptor">First Appearance</li>
+        </ul>
+        <ul id="total-weeks">
+            <li id="number">{{ results[3] }}</li>
+            <li id="descriptor">Total Weeks on the List</li>
+        </ul>
+    </div>
+    
+
+    <div class = "searchAgainButton">
+        <button type="button" onclick = "location.href = '/search';">New Search</button>
+    </div>
+
+    </div>
+    <div class="footer">
+        <ul id="footerTitle">
+            <li>Bombastic Book Besties</li>
+        </ul>
+        
+        <ul id="footerButtons">
+            <li><a href="https://www.nytimes.com/books/best-sellers/" target=”_blank”>NYT Bestseller List</a></li>
+            <li><a href="mailto: vangsteins@carleton.edu">Contact</a></li>
+            <li><a class="topBtn" href="#">Back to Top</a></li>
+        </ul>
+    </div>
+    </div>
+    </body>
+</html>

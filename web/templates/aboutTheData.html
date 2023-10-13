@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bombastic Book Besties</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='datastyle.css') }}">
+
+</head>
+<body>
+    <div id="page-container">  
+
+    <nav>
+        <ul id="headerTitle">
+            <li><a href="/">Bombastic Book Besties</li>
+        </ul>
+        
+        <ul id="navButtons">
+            <li><a href="/">Home</a></li>
+            <li><a href="/search">Search the Data</a></li>
+            <li><a class ="current" href="/about">About</a></li>
+        </ul>
+    </nav>
+    <div id="content-containter">
+    <h1> About the Data </h1>
+
+    <div class="highlight" id="aboutDataHighlight"> 
+        <h2 id="data">Data source</h2>
+        <p>Dataset Title: NYT Hardcover Fiction Bestsellers: Lists</a></p>
+        <p><a href="https://doi.org/10.18737/CNJV1733p4520220211" target=”_blank”>Dataset DOI</a></p>
+        <p><a href="https://view.data.post45.org/nytfull" target=”_blank”>Data Organized by Weeks</a> accessed 5 April 2023.</p>
+        <p><a href="https://view.data.post45.org/nyttitle" target=”_blank”>Data Organized by Title</a> accessed 5 April 2023.</p>
+        <p>Author: Jordan Pruett <a href="https://twitter.com/pruett_jordan/status/1488636573000232960?lang=en" target=”_blank”> Jordan Pruett on Twitter.</a></p>
+    </div>
+
+    <div class="aboutTheData">
+        <h2 id="scopeOfData">Data Scope</h2>
+        <p>
+            This data lists NYT Hardcover bestsellers between 1931 and 2020. 
+            The data was scraped from Hawes Publications, an online repository that publishes a pdf of the list for every year.
+        </p>
+
+        <h2 id="limitationsOfData">Data Limitations</h2>
+        <p>The dataset author, Jordan Pruett, makes sure to note that the New York Times Bestseller List reflects editorial choices and does 
+            not necessarily reflect what people were reading in those years. Additionally this data only includes hardback books and excludes paperback books. 
+        </p>
+        
+        <h2 id="modificationsOfData">Data Modifications</h2>
+        <p>The original dataset included the following variables: year, week, rank, best rank, title id, title, author, total weeks, first week, 
+            debut rank, and best rank. We modified the dataset to only include best rank, title id, title, author, total weeks, and first week. 
+            Additionally, to make searching the data easier, we capitalized all book title and author names.
+        </p>
+
+        <h2 id="citation">Citation</h2>
+        <p>Pruett, Jordan, 02/01/2022, “New York Times Hardcover Fiction Bestsellers, 1931–2020”. 
+            DOI: https://doi.org/10.18737/CNJV1733p4520220211. Post45 Data Collective, V1.
+        </p>
+        
+    </div>
+    </div>
+
+    <div class="footer">
+        <ul id="footerTitle">
+            <li>Bombastic Book Besties</li>
+        </ul>
+        
+        <ul id="footerButtons">
+            <li><a href="https://www.nytimes.com/books/best-sellers/" target=”_blank”>NYT Bestseller List</a></li>
+            <li><a href="mailto: vangsteins@carleton.edu">Contact</a></li>
+            <li><a class="topBtn" href="#">Back to Top</a></li>
+        </ul>
+    </div>
+    </div>
+    
+    </body>
+</html>
+
+
+
+
+         

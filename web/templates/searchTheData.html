@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <title>Bombastic Book Besties</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='datastyle.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='searchTheData.css') }}">
+
+</head>
+<body>
+    <div id="page-container">  
+
+    <nav>
+        <ul id="headerTitle">
+            <li><a href="/">Bombastic Book Besties</li>
+        </ul>
+        
+        <ul id="navButtons">
+            <li><a href="/">Home</a></li>
+            <li><a class = "current" href="/search">Search the Data</a></li>
+            <li><a  href="/about">About</a></li>
+        </ul>
+    </nav>
+
+    <div id="content-containter">
+    <div class="wrap">
+    <h1> Search the Data </h1>
+
+    <div class="row1">
+        <div class="highlight">
+            <h2>All Bestsellers in Year Range</h2>
+            <p>Get all the books on the bestseller list in a given year range</p>
+            <button class = "btn" onclick="allBestsellersInYearRange()">Go!</button>
+        </div>
+
+        <div class="highlight" >
+            <h2>#1 Bestsellers in Year Range</h2>
+            <p>Get only the number one bestsellers in a given year range</p>
+            <button class = "btn" onclick="numberOneBestsellersInYearRange()">Go!</button>
+        </div>
+
+        <div class="highlight">
+            <h2>Longest Running Book</h2>
+            <p>Get a list of the longest running books</p>
+            <button class = "btn" onclick="longestRunningBooks()">Go!</button>
+        </div>
+    </div>
+
+    <div class="row2">
+        <div class="highlight">
+            <h2>Books by Author</h2>
+            <p>Get any books by author on the bestseller list</p>
+            <button class = "btn" onclick="booksByAuthor()">Go!</button>
+        </div>
+
+        <div class="highlight" > 
+            <h2>Top Authors</h2>
+            <p>Get authors with the most bestselling books</p>
+            <button class = "btn" onclick="authorsMoreBooks()">Go!</button>
+        </div>
+
+        <div class="highlight">
+            <h2>Book Info</h2>
+            <p>Get info about a given book on the bestseller list</a></p>
+            <button class = "btn" onclick="bookInfo()">Go!</button>
+        </div>
+    </div>
+    
+    <div class = "queryForms">
+        <form action="/bestsellers-year" method="post" id = "allBestsellersInYearRange" onsubmit= "return(validateBestsellerYear())">
+            <label for="yearStart">Enter a starting year:</label><br>
+            <input type="number" id="yearStart" name="yearStart" min="1931" max ="2020" required><br>
+            <label for="yearEnd">Enter a ending year:</label><br>
+            <input type="number" id="yearEnd" name="yearEnd" min="1931" max ="2020" required><br>
+            <input type="submit" value="Submit">
+        </form> 
+
+        <form action="/number-one-bestsellers-given-year" method="post" id = "numberOneBestsellersInYearRange" onsubmit= "return(validateNumOneBestsellerYear())">
+            <label for="yearStart">Enter a starting year:</label><br>
+            <input type="number" id="yearStart" name="yearStart" min="1931" max ="2020" required><br>
+            <label for="yearEnd">Enter a ending year:</label><br>
+            <input type="number" id="yearEnd" name="yearEnd" min="1931" max ="2020" required><br>
+            <input type="submit" value="Submit">
+        </form> 
+
+        <form action="/books-by-author" method="post" id ="booksByAuthor">
+            <label for="author">Enter an author:</label><br>
+            <input type="text" id="author" name="author" min= "1" required><br>
+            <input type="submit" value="Submit">
+        </form> 
+
+        <form action="/longest-running" method="post" id ="longestRunningBooks">
+            <label for="numBooks">Enter a number of books:</label><br>
+            <input type="number" id="numBooks" name="numBooks" min = "1" max= "7431" required><br>
+            <input type="submit" value="Submit">
+        </form> 
+
+        <form action="/book-info" method="post" id = "bookInfo">
+            <label for="title">Enter a book title:</label><br>
+            <input type="text" id="title" name="title" required><br>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <form action="/top-authors" method="post" id ="topAuthors">
+            <label for="numAuthors">Enter a number of authors:</label><br>
+            <input type="number" id="numAuthors" name="numAuthors" min = "1" max = "2197" required><br>
+            <input type="submit" value="Submit">
+        </form> 
+
+    </div>
+
+    <div class="footer">
+        <ul id="footerTitle">
+            <li>Bombastic Book Besties</li>
+        </ul>
+        
+        <ul id="footerButtons">
+            <li><a href="https://www.nytimes.com/books/best-sellers/" target=”_blank”>NYT Bestseller List</a></li>
+            <li><a href="mailto: vangsteins@carleton.edu">Contact</a></li>
+            <li><a class="topBtn" href="#">Back to Top</a></li>
+        </ul>
+    </div>
+
+    <script>
+       function allBestsellersInYearRange() {
+            hideForms();
+            var t = document.getElementById('allBestsellersInYearRange');
+            t.style.display = 'block';
+            t.scrollIntoView();
+        }
+
+        function numberOneBestsellersInYearRange(){
+            hideForms();
+            var t = document.getElementById('numberOneBestsellersInYearRange');
+            t.style.display = 'block';
+            t.scrollIntoView();
+        }
+
+        function booksByAuthor(){
+            hideForms();
+            var t = document.getElementById('booksByAuthor');
+            t.style.display = 'block';
+            t.scrollIntoView();
+        }
+
+        function authorsMoreBooks(){
+            hideForms();
+            var t = document.getElementById('topAuthors');
+            t.style.display = 'block';
+            t.scrollIntoView();
+        }
+
+        function longestRunningBooks(){
+            hideForms();
+            var t = document.getElementById('longestRunningBooks');
+            t.style.display = 'block';
+            t.scrollIntoView();
+        }
+
+        function bookInfo(){
+            hideForms();
+            var t = document.getElementById('bookInfo');
+            t.style.display = 'block';
+            t.scrollIntoView();
+        }
+
+        function hideForms() {
+            var a = document.getElementById('allBestsellersInYearRange');
+            var b = document.getElementById('numberOneBestsellersInYearRange');
+            var c = document.getElementById('booksByAuthor');
+            var d = document.getElementById('longestRunningBooks');
+            var e = document.getElementById('bookInfo');
+            var f = document.getElementById('topAuthors');
+
+            if(a.style.display == 'block') {
+                a.style.display = 'none';
+            }
+
+            if(b.style.display == 'block') {
+                b.style.display = 'none';
+            }
+
+            if(c.style.display == 'block') {
+                c.style.display = 'none';
+            }
+
+            if(d.style.display == 'block') {
+                d.style.display = 'none';
+            }
+
+            if(e.style.display == 'block') {
+                e.style.display = 'none';
+            }
+
+            if(f.style.display == 'block') {
+                f.style.display = 'none';
+            }
+        }
+
+        function validateBestsellerYear() {
+            var startYear = document.getElementById("allBestsellersInYearRange").yearStart.value;
+            var endYear = document.getElementById("allBestsellersInYearRange").yearEnd.value;
+            if(startYear > endYear){
+                alert("Starting year must be less than or equal to ending year");
+                return false;
+            }
+            return true;
+        }
+
+        function validateNumOneBestsellerYear(){
+            var startYear = document.getElementById("numberOneBestsellersInYearRange").yearStart.value;
+            var endYear = document.getElementById("numberOneBestsellersInYearRange").yearEnd.value;
+            if(startYear > endYear){
+                alert("Starting year must be less than or equal to ending year");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

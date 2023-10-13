@@ -1,0 +1,86 @@
+.highlight { 
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.row1 {
+    text-align: center;
+}
+
+.row2 {
+    text-align: center;
+}
+
+.highlight .btn {
+    position: absolute;
+    top: 77%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 20px;
+    background-color: #adaed1 ;
+    border-color: #898ab2;
+    color: #3B413C;
+    padding: 7px 30px;
+    border-radius: 25px;
+}
+
+.btn:hover{
+    text-decoration: underline;
+}
+
+h1{
+    font-size: 2.4em;
+}
+
+input{
+    height: 30px;
+    border-radius: 20px;
+    float: center;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+div .queryForms{
+    margin-top: 50px;
+    position: relative;
+    text-align: center;
+    bottom: 0;
+    font-size: 30px;
+  }
+
+#allBestsellersInYearRange {
+    display: none;
+    margin-bottom: 60px;
+}
+
+#numberOneBestsellersInYearRange {
+    display: none;
+    margin-bottom: 60px;
+}
+
+#booksByAuthor {
+    display: none;
+    margin-bottom: 60px;
+}
+
+#topAuthors {
+    display: none;
+    margin-bottom: 60px;
+}
+
+#longestRunningBooks {
+    display: none;
+    margin-bottom: 60px;
+}
+
+#isBesteller {
+    display: none;
+    margin-bottom: 60px;
+}
+
+#bookInfo {
+    display: none;
+    margin-bottom: 60px;
+}

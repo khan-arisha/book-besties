@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Bombastic Book Besties</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='datastyle.css') }}">
+</head>
+<body>
+    <div id="page-container">  
+    <nav>
+        <ul id="headerTitle">
+            <li><a href="/"> Bombastic Book Besties</li>
+        </ul>
+        
+        <ul id="navButtons">
+            <li><a class = "current" href="/">Home</a></li>
+            <li><a href="/search">Search the Data</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+
+    <div id="content-containter">
+    <div class="image-box">
+        <img src="{{ url_for('static', filename='Myproject.jpg') }}" alt="Book picture." class = "bookPicture"/>
+        <h1 class="centered">Find your next great read here...</h1>
+        <button class="btn"><a href="/search" style="text-decoration: none">Search the Data</a></button>
+    </div>
+
+    <div class="content">
+        <h2 id="why">Why NYT Bestsellers?</h2>
+        <hr id = firstLine>
+
+        <p>We have a passion for books. We hope this website will allow book enthusiasts to find information about NYT best-selling books 
+            and authors from over the past century, and perhaps provide inspiration for their next literary experience.
+        </p>
+        
+    </div>
+
+    <div class="fun-facts">
+        <h2 id="fun">Fun facts about NYT bestselling books</h2>
+        <hr>
+
+        <ul id="fun-content">
+            <li>The NYT started compiling this list in 1931.</li>
+            <li>Danielle Steele has 116 books on the NYT bestsellers list.</li>
+            <li>"Oh, The Places You'll Go!" by Dr. Seuss is the longest running book on the NYT bestsellers list.</li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="footer">
+        <ul id="footerTitle">
+            <li>Bombastic Book Besties</li>
+        </ul>
+        
+        <ul id="footerButtons">
+            <li><a href="https://www.nytimes.com/books/best-sellers/" target=”_blank”>NYT Bestseller List</a></li>
+            <li><a href="mailto: vangsteins@carleton.edu">Contact</a></li>
+            <li><a class="topBtn" href="#">Back to Top</a></li>
+        </ul>
+    </div>
+    </div>
+    </body>
+</html>

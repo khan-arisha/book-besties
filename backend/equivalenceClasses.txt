@@ -1,0 +1,31 @@
+everything that include a year range (getBestsellersGivenYearRange and getNumberOneBestSellersGivenYearRange):
+    - yearStart = yearEnd
+    - yearEnd > yearStart
+    - yearEnd > 2020
+    - yearStart < 1931
+    - yearEnd < yearStart
+
+getBooksByAuthor:
+    -author is invalid ex. Selma Vangstein
+    -author is valid J.K. Rowling
+
+getAuthorsWithMoreThanNumBooks:
+    - negative numbers
+    - positive numbers where at least one author has published more than that many books
+    - positive numbers where no author has written that many books 
+
+getLongestRunningBooks:
+    -topNum is between 1 and the total number of books on the list
+    -topNum is 0
+    -topNum is more than the number of books in the entire list
+    -topNum is negative
+
+
+isBestseller:
+    -book name is valid ex. "The Ten Commandments"
+    -book name with special characters ex. "Inside, Outside"
+    -book name is invalid ex. "Fantastic Fish"
+
+getBookInfo:
+    -book name is valid ex. "The Ten Commandments"
+    -book name is invalid ex. "Fantastic Fish"

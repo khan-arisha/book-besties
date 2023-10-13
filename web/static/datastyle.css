@@ -1,0 +1,349 @@
+nav{
+  background-color: #999Ac6;
+	display: inline-block;
+	width: 100%;
+  line-height: 5%;
+  list-style-type: none;
+}
+
+#navButtons{
+  float: right;
+  padding-right: 10px;
+}
+
+#navButtons li
+{
+	text-align: center;
+	display: inline-block;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 6px;
+  padding-right: 10px;
+}
+
+#navButtons li a{
+  vertical-align: middle;
+  color: #000000;
+  text-decoration: none;
+}
+
+#navButtons li a.current{
+  color: #ffffff
+ }
+
+#navButtons li a:hover{
+  text-decoration: underline;
+}
+
+#headerTitle
+{
+	float: left;
+  text-decoration: none;
+}
+
+#headerTitle li
+{
+	text-align: center;
+	display: inline-block;
+  font-weight: bold;
+  color: #000000;
+  font-size: 1.7em;
+  padding: 1px;
+}
+
+#headerTitle li a {
+  text-decoration: none;
+  color: #000000;
+}
+
+#headerTitle li a:hover{
+  text-decoration: underline;
+}
+
+.bookPicture{
+  vertical-align: middle;
+}
+
+
+body {
+  background-color: #F1F1F9;
+  font-size: large;
+  font: lato,sans-serif;
+    
+}
+
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #e7728a
+}
+
+h1, h2 {
+  font-family: lato,sans-serif; 
+}
+
+h2 {
+  margin-left: 4%;
+  margin-bottom: 0;
+  color: rgb(84, 87, 162)
+}
+
+hr {
+  height: 1px;
+  width: 34%;
+  text-align: left;
+  margin-left: 4%;
+  border-width:0;
+  background-color: #d9b08c;
+}
+
+#firstLine {
+  width: 33%;
+}
+
+p {
+  font-family: lato,sans-serif;
+  line-height: 1.4;
+  margin-left: 4%;
+  margin-right: 5%;
+}
+
+figure {
+  float: left;
+  margin-right: 30px;
+  margin-top: 50px;
+}
+
+figcaption {
+  text-align: center;
+}
+
+div {
+  padding-bottom: 10px;
+  color: #2f2f2f;
+}
+
+li {
+  font-family: lato,sans-serif;
+  line-height: 1.4;
+}
+
+div.content {
+  width: 65%;
+  margin-left: 2%;
+  color: #3f3f3f;
+  font-size: 1.1em
+}
+
+div.fun-facts {
+  color: #3f3f3f
+}
+
+div.aboutTheData{
+  width: 72%;
+}
+
+div.highlight {
+  background-color: #f7d4db;
+  width: 300px;
+  border: 2px solid #e7728a;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+}
+
+#scopeOfData{
+  margin-top: 40px;
+  margin-bottom: 7px;
+}
+
+#limitationsOfData{
+  margin-top: 40px;
+  margin-bottom: 7px;
+}
+
+#modificationsOfData{
+  margin-top: 40px;
+  margin-bottom: 7px;
+}
+
+#citation{
+  margin-top: 40px;
+  margin-bottom: 7px;
+}
+
+.image-box {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin: 0; 
+  padding-top: 30px; 
+  outline: none;
+}
+  
+.image-box img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  filter: brightness(70%)
+}
+
+.image-box .btn {
+  position: absolute;
+  top: 72%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border: 2px solid #e7728a;
+  border-radius: 8px;
+  background-color: #f7d4db;
+  color: white;
+  font-size: 1.5em;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.image-box a {
+  color: #2f2f2f
+}
+
+.centered {
+  color: #d1e8e2;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 46px;
+}
+
+.contain {
+  text-align: center;
+}
+  
+#searchButtons {
+  list-style-type: none;
+}
+
+.search {
+  display: inline-block;
+  margin-right: 50px;
+  align-items: center;
+}
+
+.highlight {
+  height: 220px; 
+  width: 300px;
+}
+
+#aboutDataHighlight {
+  float: right;
+  height: 380px;
+  padding-top: 6px;
+  margin-right: 5%;
+}
+
+#fun-content {
+  width: 65%;
+  margin-left: 2%;
+  color: #3f3f3f;
+  font-size: 1.1em;
+  margin-bottom: 65px;
+}
+
+#page-container {
+  position: relative;
+  min-height: 95vh;
+}
+
+#content-container {
+  padding-bottom: 65px;
+}
+
+.searchAgainButton {
+  width:  100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+.searchAgainButton button {
+  font-size: 20px;
+  background-color: #a6a7c1 ;
+  border-color: #b8bacf;
+  padding: 7px 30px;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+  
+.searchAgainButton:hover{
+  text-decoration: underline;
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #999Ac6;
+  text-align: center;
+  padding-top: 8px;
+  margin-top: 60px;
+  display: inline-block;
+}
+
+#footerButtons{
+  float: right;
+  padding-right: 10px;
+  text-decoration: none;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+#footerButtons li {
+  text-align: center;
+  padding: 5px;
+  display: inline-block;
+}
+
+#footerButtons li a{
+  text-decoration: none;
+  vertical-align: middle;
+  color: #0f0f0f;
+}
+
+#footerButtons li a:hover{
+  text-decoration: underline;
+}
+
+#footerTitle {
+  float: left;
+  text-decoration: none;
+  list-style-type: none;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#footerButtons li a.topBtn {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.aboutTheData {
+  padding-bottom: 60px;
+}
+
+.error-message {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-message p {
+  font-size: 1.2em;
+}

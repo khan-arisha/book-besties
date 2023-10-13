@@ -1,0 +1,31 @@
+h2 {
+    text-align: center;
+    font-size: 1.6em;
+    color: #2c3531;
+}
+
+.longest-running-results {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 38%;
+}
+
+th {
+    font-size: 1.2em;
+}
+
+td {
+    text-align: left;
+    font-size: 1.3em;
+}
+
+.rectangle {
+    height: 10px;
+    background: #d9b08c;
+    margin-right: 10px;
+    font-size: .8em;
+    text-align: left;
+    padding-top: 3px;
+    padding-right: 25px;
+    width: 155px;
+}

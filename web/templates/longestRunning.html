@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <title>Bombastic Book Besties</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='datastyle.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='longestRunning.css') }}">
+</head>
+<body>
+    <div id="page-container">  
+
+    <nav>
+        <ul id="headerTitle">
+            <li><a href="/"></a> Bombastic Book Besties</li>
+        </ul>
+        
+        <ul id="navButtons">
+            <li><a href="/">Home</a></li>
+            <li><a class = "current" href= "/search">Search the Data</a></li>
+            <li><a  href="/about">About</a></li>
+        </ul>
+    </nav>
+
+    <div id="content-containter">
+    <h1> Results </h1>
+
+    <div>
+        <h2>Top {{results[1]['numBooks']}} Bestsellers </h2>
+        <div class="longest-running-results">
+        <table>
+            <tr>
+                <th id="header1">Weeks on the List</th>
+                <th id="header2">Title</th>
+            </tr>
+            {% for data in results[0] %}
+            <tr>
+                <td><div class="rectangle" width="var(--width)"> {{ data[1] }} </div></td>
+                <td> {{ data[0].title()}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+    </div>
+
+    <div class = "searchAgainButton">
+        <button type="button" onclick = "location.href = '/search';">New Search</button>
+    </div>
+    </div>
+    
+    <div class="footer">
+        <ul id="footerTitle">
+            <li>Bombastic Book Besties</li>
+        </ul>
+        
+        <ul id="footerButtons">
+            <li><a href="https://www.nytimes.com/books/best-sellers/" target=”_blank”>NYT Bestseller List</a></li>
+            <li><a href="mailto: vangsteins@carleton.edu">Contact</a></li>
+            <li><a class="topBtn" href="#">Back to Top</a></li>
+        </ul>
+    </div>
+    </div>  
+    </body>
+</html>
+
